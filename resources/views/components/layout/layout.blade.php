@@ -13,11 +13,14 @@
             <h1 class="font-semibold text-2xl">Mini Post</h1>
         </a>
         <div class="w-1/3 flex justify-around">
-            <a href="/" class="text-gray-50/75 hover:text-gray-50 hover:text-xl transition-all duration-200 active:text-lg">Home</a>
-            <a href="/" class="text-gray-50/75 hover:text-gray-50 hover:text-xl transition-all duration-200">Post</a>
-            <a href="/" class="text-gray-50/75 hover:text-gray-50 hover:text-xl transition-all duration-200">Contact</a>
-            <a href="/" class="text-gray-50/75 hover:text-gray-50 hover:text-xl transition-all duration-200">Profile</a>
+            <x-navlink href="/" request="{{ request()->path() === '/' }}">Home</x-navlink>            
+            <x-navlink href="/post" request="{{ request()->path() === 'post' }}">Post</x-navlink>            
+            <x-navlink href="/about" request="{{ request()->path() === 'about' }}">About</x-navlink>            
+            <x-navlink href="/contact" request="{{ request()->path() === 'contact' }}">Contact</x-navlink>            
         </div>
     </nav>
+    <div class="mt-16 px-10">
+        {{ $slot }}
+    </div>
 </body>
 </html>
