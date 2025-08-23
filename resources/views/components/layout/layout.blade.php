@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mini Post App</title>
     @vite('resources/css/app.css')
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <nav class="bg-gray-800 text-gray-50 w-full p-3 flex justify-between items-center fixed top-0 left-0">
